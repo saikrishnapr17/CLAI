@@ -1,0 +1,32 @@
+# Binaries for programs and plugins
+/nexus
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Output of the go coverage tool
+*.out
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Dependency directories (remove the comment to include vendor when needed)
+vendor/
+
+# OS files
+.DS_Store
+
+# IDEs and editors
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+cache/
