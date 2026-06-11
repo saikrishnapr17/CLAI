@@ -1,9 +1,9 @@
-# Nexus — Natural language terminal
+# CLAI — Natural language terminal
 
-Nexus lets you type plain English and translates it to a shell command (via the Groq API), confirms with you, then executes it.
+CLAI lets you type plain English and translates it to a shell command (via the Groq API), confirms with you, then executes it.
 
 ## Features
-- Interactive REPL: prompt `nexus ❯` and type natural language requests.
+- Interactive REPL: prompt `CLAI ❯` and type natural language requests.
 - Translates requests using Groq (`llama-4-scout-17b-16e-instruct`).
 - Confirms before executing and streams command output in real time.
 - Safety checks to block destructive commands.
@@ -24,14 +24,14 @@ You can get a key at https://console.groq.com
 ## Build
 ```bash
 go mod tidy
-go build -o nexus .
+go build -o CLAI .
 ```
 
 ## Run
 Start the interactive CLI:
 
 ```bash
-./nexus
+./CLAI
 ```
 
 Usage notes:
@@ -40,7 +40,7 @@ Usage notes:
 - If Groq cannot translate a request it will return `CANNOT_TRANSLATE`.
 
 ## Safety
-Nexus enforces several runtime checks to avoid destructive operations (for example `rm -rf /`, `mkfs`, `dd if=` and common fork-bombs). The CLI will refuse to execute flagged commands and will print a clear error.
+CLAI enforces several runtime checks to avoid destructive operations (for example `rm -rf /`, `mkfs`, `dd if=` and common fork-bombs). The CLI will refuse to execute flagged commands and will print a clear error.
 
 ## Files of interest
 - [main.go](main.go) — REPL loop and wiring
@@ -51,7 +51,7 @@ Nexus enforces several runtime checks to avoid destructive operations (for examp
 - [internal/ui/display.go](internal/ui/display.go) — colored terminal UI
 
 ## Next steps / optional features
-- Command history (`~/.nexus_history`)
+- Command history (`~/.CLAI_history`)
 - `--dry-run` and `--explain` flags
 - Pipe mode for non-interactive usage
 
